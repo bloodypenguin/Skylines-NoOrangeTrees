@@ -19,7 +19,6 @@ namespace NoOrangeTrees
                 {
                     return;
                 }
-                UnityEngine.Debug.Log("Setting game view texture");
                 Shader.SetGlobalTexture("_NaturalResources", (Texture)NaturalResourceManager.instance.m_resourceTexture);
             }
             else
@@ -28,7 +27,6 @@ namespace NoOrangeTrees
                 {
                     return;
                 }
-                UnityEngine.Debug.Log("Setting info view texture");
                 Shader.SetGlobalTexture("_NaturalResources", (Texture)NaturalResourcesManagerDetour.infoViewTexture);
             }
             cachedInfoMode = InfoManager.instance.CurrentMode;

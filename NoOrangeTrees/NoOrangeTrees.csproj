@@ -50,7 +50,7 @@
     <Compile Include="InfoViewMonitor.cs" />
     <Compile Include="LoadingExtension.cs" />
     <Compile Include="Mod.cs" />
-    <Compile Include="NaturalResourcesManagerDetour.cs" />
+    <Compile Include="Detours\NaturalResourcesManagerDetour.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="OptionsFramework\AbstractOptionsAttribute.cs" />
     <Compile Include="OptionsFramework\CheckboxAttribute.cs" />

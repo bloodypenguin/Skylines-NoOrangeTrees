@@ -26,14 +26,7 @@ namespace NoOrangeTrees
 
         private static IEnumerator RefreshTextureAction()
         {
-            m_modifiedX1 = new int[512];
-            m_modifiedX2 = new int[512];
-            for (int index = 0; index < 512; ++index)
-            {
-                m_modifiedX1[index] = 0;
-                m_modifiedX2[index] = 511;
-            }
-            typeof(NaturalResourceManager).GetMethod("UpdateTexture", BindingFlags.Instance|BindingFlags.NonPublic).Invoke(NaturalResourceManager.instance, new object[] {});
+            NaturalResourceManager.instance.AreaModified(0, 0, 511, 511);
             yield return null;
         }
 
