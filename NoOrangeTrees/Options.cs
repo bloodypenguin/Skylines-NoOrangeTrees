@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using NoOrangeTrees.Detours;
 using NoOrangeTrees.OptionsFramework;
 
 namespace NoOrangeTrees
@@ -13,6 +14,7 @@ namespace NoOrangeTrees
             forest = false;
             fertility = false;
             ore = false;
+            burned = false;
         }
 
         [Checkbox("No orange/dead trees at shoreline, no shoreline ground color", nameof(NaturalResourcesManagerDetour), nameof(NaturalResourcesManagerDetour.RefreshTexture))]
@@ -27,6 +29,9 @@ namespace NoOrangeTrees
         public bool oil { set; get; }
         [Checkbox("No forest area ground color", nameof(NaturalResourcesManagerDetour), nameof(NaturalResourcesManagerDetour.RefreshTexture))]
         public bool forest { set; get; }
+        [Checkbox("No burned area ground color", nameof(NaturalResourcesManagerDetour), nameof(NaturalResourcesManagerDetour.RefreshTexture))]
+        public bool burned { set; get; }
+
 
         [XmlIgnore]
         public string FileName => "CSL-NoOrangeTrees.xml";
